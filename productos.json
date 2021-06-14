@@ -1,0 +1,286 @@
+[
+  {
+    "parteArriba":[
+      {
+        "id": 1,
+        "nombre": "BARCELONA",
+        "precioC": 1500,
+        "precioA": 400,
+        "talle": "M",
+        "foto": "camisa-blanca.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "PARIS",
+        "precioC": 1700,
+        "precioA": 450,
+        "talle": "L",
+        "foto": "camisa-bordo.jpeg"
+      },
+      {
+        "id": 3,
+        "nombre": "LOS ANGELES",
+        "precioC": 1350,
+        "precioA": 300,
+        "talle": "M",
+        "foto": "camisa-colores.jpeg"
+      },
+      {
+        "id": 4,
+        "nombre": "TOKIO",
+        "precioC": 1800,
+        "precioA": " ",
+        "talle": "M",
+        "foto": "camisa-durazno.jpeg"
+      },
+      {
+        "id": 5,
+        "nombre": "OSLO",
+        "precioC": 1700,
+        "precioA": 380,
+        "talle": "M",
+        "foto": "camisa-negra.jpeg"
+      },
+      {
+        "id": 6,
+        "nombre": "MOSCU",
+        "precioC": 1750,
+        "precioA": 430,
+        "talle": "L",
+        "foto": "camisa-negracolor.jpeg"
+      },
+      {
+        "id": 7,
+        "nombre": "CHICAGO",
+        "precioC": 1900,
+        "precioA": 520,
+        "talle": "S",
+        "foto": "camisa-rosa.jpeg"
+      },
+      {
+        "id": 8,
+        "nombre": "PEKIN",
+        "precio": 2300,
+        "precioA": 540,
+        "talle": "M",
+        "foto": "cardigan.jpg"
+      },
+      {
+        "id": 9,
+        "nombre": "HOUSTON",
+        "precioC": 980,
+        "precioA": 300,
+        "talle": "M",
+        "foto": "remera-hendrix.jpg"
+      },
+      {
+        "id": 10,
+        "nombre": "HONG KONG",
+        "precioC": 1000,
+        "precioA": 320,
+        "talle": "S",
+        "foto": "remera-ramones.jpg"
+      },
+      {
+        "id": 11,
+        "nombre": "BOSTON",
+        "precioC": 890,
+        "precioA": 290,
+        "talle": "L",
+        "foto": "remera-rollingstone.jpg"
+      },
+      {
+        "id": 12,
+        "nombre": "BUENOS AIRES",
+        "precioC": 940,
+        "precioA": 320,
+        "talle": "XL",
+        "foto": "remera-moto.jpg"
+      },
+      {
+        "id": 13,
+        "nombre": "ATLANTA",
+        "precioC": 1400,
+        "precioA": 650,
+        "talle": "M",
+        "foto": "remeron-thewho.jpg"
+      },
+      {
+        "id": 14,
+        "nombre": "MILAN",
+        "precioC": 3800,
+        "precioA": 840,
+        "talle": "M",
+        "foto": "blazer.jpg"
+      },
+      {
+        "id": 15,
+        "nombre": "AMSTERDAN",
+        "precioC": 2300,
+        "precioA": 500,
+        "talle": "M",
+        "foto": "buzo-alf.jpg"
+      },
+      {
+        "id": 16,
+        "nombre": "BUSAN",
+        "precioC": 2530,
+        "precioA": 400,
+        "talle": "L",
+        "foto": "buzo-negro.jpg"
+      },
+      {
+        "id": 17,
+        "nombre": "ATLANTA",
+        "precioC": 2600,
+        "precioA": 520,
+        "talle": "XL",
+        "foto": "buzo-negrocorazon.jpg"
+      }
+    ]
+  },
+  { 
+    "monoprendas": [
+      {
+        "id": 18,
+        "nombre": "SINGAPUR",
+        "precioC": 3890,
+        "precioA": 750,
+        "talle": "L",
+        "foto": "mono.jpg"
+      },
+      {
+        "id": 19,
+        "nombre": "MIAMI",
+        "precioC": 3600,
+        "precioA": 820,
+        "talle": "S",
+        "foto": "vestido-negro.jpg"
+      },
+      {
+        "id": 20,
+        "nombre": "MUNICH",
+        "precioC": 4600,
+        "precioA": " ",
+        "talle": "L",
+        "foto": "vestido-negrp.jpg"
+      },
+      {
+        "id": 21,
+        "nombre": "MADRID",
+        "precioC": 3900,
+        "precioA": 650,
+        "talle": "XL",
+        "foto": "vestido-rojo.jpg"
+      },
+      {
+        "id": 22,
+        "nombre": "SIDNEY",
+        "precioC": 4670,
+        "precioA": " ",
+        "talle": "M",
+        "foto": "vestido-rojizo.jpg"
+      },
+      {
+        "id": 23,
+        "nombre": "TORONTO",
+        "precioC": 3690,
+        "precioA": 480,
+        "talle": "L",
+        "foto": "vestido-suelto.jpg"
+      }
+    ]
+  },
+  
+  {
+    "parteAbajo": [
+      {
+        "id": 24,
+        "nombre": "BRUSELAS",
+        "precioC": 800,
+        "precioA": 250,
+        "talle": "M",
+        "foto": "biker-verde.jpg"
+      },
+      {
+        "id": 25,
+        "nombre": "DETROIT",
+        "precioC": 2500,
+        "precioA": 410,
+        "talle": "L",
+        "foto": "pantalo-negro.jpg"
+      },
+      {
+        "id": 26,
+        "nombre": "PHOENIX",
+        "precioC": 1980,
+        "precioA": " ",
+        "talle": "S",
+        "foto": "pantalon-cuadro.jpg"
+      },
+      {
+        "id": 27,
+        "nombre": "WUXI",
+        "precioC": 2000,
+        "precioA": 400,
+        "talle": "L",
+        "foto": "pantalon-jogger.jpeg"
+      },
+      {
+        "id": 28,
+        "nombre": "LIMA",
+        "precioC": 2900,
+        "precioA": 700,
+        "talle": "L",
+        "foto": "pantalon-ladrillo.jpg"
+      },
+      {
+        "id": 29,
+        "nombre": "MANILA",
+        "precioC": 2700,
+        "precioA": 530,
+        "talle": "L",
+        "foto": "pantalon-rojo.jpg"
+      },
+      {
+        "id": 30,
+        "nombre": "DENVER",
+        "precioC": 2400,
+        "precioA": 380,
+        "talle": "L",
+        "foto": "pantalon-verde.jpg"
+      },
+      {
+        "id": 31,
+        "nombre": "BOMBAY",
+        "precioC": 2400,
+        "precioA": 350,
+        "talle": "M",
+        "foto": "pantalon-satrero.jpg"
+      },
+      {
+        "id": 32,
+        "precioC": 1800,
+        "precioA": 290,
+        "talle": "M",
+        "foto": "pollera-amarilla.jpg"
+      },
+      {
+        "id": 33,
+        "nombre": "KOBE",
+        "precioC": 2500,
+        "precioA": 410,
+        "talle": "L",
+        "foto": "pollera-blancanegra.jpg"
+      },
+      {
+        "id": 34,
+        "nombre": "MONTREAL",
+        "precioC": 1500,
+        "precioA": " ",
+        "talle": "S",
+        "foto": "short.png"
+      }
+    ]
+  }  
+]
