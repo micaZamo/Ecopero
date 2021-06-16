@@ -1,0 +1,90 @@
+[
+    {
+      "id": 24,
+      "nombre": "Biker BRUSELAS",
+      "precioC": 800,
+      "precioA": 250,
+      "talle": "M",
+      "foto": "biker-verde.jpg"
+    },
+    {
+      "id": 25,
+      "nombre": "Pantalon DETROIT",
+      "precioC": 2500,
+      "precioA": 410,
+      "talle": "L",
+      "foto": "pantalo-negro.jpg"
+    },
+    {
+      "id": 26,
+      "nombre": "Pantalon PHOENIX",
+      "precioC": 1980,
+      "precioA": " ",
+      "talle": "S",
+      "foto": "pantalon-cuadro.jpg"
+    },
+    {
+      "id": 27,
+      "nombre": "Pantalon WUXI",
+      "precioC": 2000,
+      "precioA": 400,
+      "talle": "L",
+      "foto": "pantalon-jogger.jpeg"
+    },
+    {
+      "id": 28,
+      "nombre": "Pantalon LIMA",
+      "precioC": 2900,
+      "precioA": 700,
+      "talle": "L",
+      "foto": "pantalon-ladrillo.jpg"
+    },
+    {
+      "id": 29,
+      "nombre": "Pantalon MANILA",
+      "precioC": 2700,
+      "precioA": 530,
+      "talle": "L",
+      "foto": "pantalon-rojo.jpg"
+    },
+    {
+      "id": 30,
+      "nombre": "Pantalon DENVER",
+      "precioC": 2400,
+      "precioA": 380,
+      "talle": "L",
+      "foto": "pantalon-verde.jpg"
+    },
+    {
+      "id": 31,
+      "nombre": "Pantalon BOMBAY",
+      "precioC": 2400,
+      "precioA": 350,
+      "talle": "M",
+      "foto": "pantalon-satrero.jpg"
+    },
+    {
+      "id": 32,
+      "nombre": "Pollera LITUANIA",
+      "precioC": 1800,
+      "precioA": 290,
+      "talle": "M",
+      "foto": "pollera-amarilla.jpg"
+    },
+    {
+      "id": 33,
+      "nombre": "Pollera KOBE",
+      "precioC": 2500,
+      "precioA": 410,
+      "talle": "L",
+      "foto": "pollera-blancanegra.jpg"
+    },
+    {
+      "id": 34,
+      "nombre": "Short MONTREAL",
+      "precioC": 1500,
+      "precioA": " ",
+      "talle": "S",
+      "foto": "short.png"
+    }
+  ]

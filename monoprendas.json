@@ -1,0 +1,50 @@
+[
+    {
+      "id": 18,
+      "nombre": "Mono SINGAPUR",
+      "precioC": 3890,
+      "precioA": 750,
+      "talle": "L",
+      "foto": "mono.jpg"
+    },
+    {
+      "id": 19,
+      "nombre": "Vestido MIAMI",
+      "precioC": 3600,
+      "precioA": 820,
+      "talle": "S",
+      "foto": "vestido-negro.jpg"
+    },
+    {
+      "id": 20,
+      "nombre": "Vestido MUNICH",
+      "precioC": 4600,
+      "precioA": " ",
+      "talle": "L",
+      "foto": "vestido-negrp.jpg"
+    },
+    {
+      "id": 21,
+      "nombre": "Vestido MADRID",
+      "precioC": 3900,
+      "precioA": 650,
+      "talle": "XL",
+      "foto": "vestido-rojo.jpg"
+    },
+    {
+      "id": 22,
+      "nombre": "Vestido SIDNEY",
+      "precioC": 4670,
+      "precioA": " ",
+      "talle": "M",
+      "foto": "vestido-rojizo.jpg"
+    },
+    {
+      "id": 23,
+      "nombre": "Vestido TORONTO",
+      "precioC": 3690,
+      "precioA": 480,
+      "talle": "L",
+      "foto": "vestido-suelto.jpg"
+    }
+  ]

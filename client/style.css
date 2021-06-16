@@ -1,0 +1,65 @@
+header {
+  background: white;
+  height: 59px;
+  text-align: right;
+}
+header > img {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+nav {
+  background: pink;
+  height: 36px;
+  text-align: center;
+  position: inherit;
+  top: 50px;
+  width: 100%;
+  padding: 20px;
+  font-size: 17px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+nav > a {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.prod-inicio {
+  height: 500px;
+  width: 617.6px;
+  border: 1px solid black;
+  background-image: url("fondo-prod.jpg");
+  display: inline-block;
+  font-family: -webkit-pictograph;
+  font-size: -webkit-xxx-large;
+}
+.prod-inicio > a {
+  position: absolute;
+  font-size: 50px;
+  margin-top: 195px;
+  color: lightblue;
+  width: 50%;
+  text-align: center;
+  background: floralwhite;
+}
+
+.recomendaciones {
+  height: 500px;
+  width: 617.6px;
+  border: 1px solid black;
+  background-image: url("fondo-recom.png");
+  display: inline-block;
+  font-family: -webkit-pictograph;
+  font-size: -webkit-xxx-large;
+}
+.recomendaciones > a {
+  position: absolute;
+  background: floralwhite;
+  font-size: 50px;
+  margin-top: 195px;
+  color: lightblue;
+  width: 50%;
+  text-align: center;
+}

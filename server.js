@@ -2,8 +2,15 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const expHbs = require("express-handlebars");
-const productos = require("./productos.json");
+const dbproductos = require("./dbproductos");
+const expSession = require("express-session");
+const users = require("./users.json");
 const puerto = 4554;
+
+app.use(express.urlencoded({ extended: true }));
+
+//Mildware de recursos estaticos
+app.use(express.static(path.join(`${__dirname}/client`)));
 
 //***Configuracion de handlebars
 app.engine(
@@ -16,25 +23,85 @@ app.engine(
 app.set("view engine", "handlebars");
 app.set("views", path.join(`${__dirname}/views`));
 
-//Mildware de recursos estaticos
-app.use(express.static(path.join(`${__dirname}/client`)));
+//Para sesiones en express
+app.use(
+  expSession({
+    secret: "isahdihvbrvyrbvrysgdygdefuiahf",
+  })
+);
 
 app.get("/", (req, res) => {
   res.render("bienvenida", {
-    titulo: "Sitio de Productos",
+    titulo: "Ecopero",
   });
 });
-app.get("/productos", (req, res) => {
-  // Busco los productos
-  const todosProductos = productos.parteArriba;
 
-  // Renderizo la vista "grilla" con esos datos
-  res.render("grilla", {
-    productos: todosProductos,
-    titulo: "Búsqueda de productos",
+app.post("/login", (req, res) => {
+  const user = getUser(req.body.usr, req.body.pwd);
+
+  if (user) {
+    req.session.username = user.username;
+    req.session.name = user.name;
+    req.session.userimg = user.userimg;
+
+    console.log(req.session);
+
+    res.redirect("/home");
+  } else {
+    res.redirect("/");
+  }
+});
+
+app.get("/home", (req, res) => {
+  if (!req.session.username) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("home", {
+    name: req.session.name,
+    userPic: req.session.userimg,
   });
+});
+
+app.get("/datos", (req, res) => {
+  if (!req.session.username) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("datos", {
+    name: req.session.name,
+    username: req.session.username,
+    userPic: req.session.userimg,
+  });
+});
+
+app.get("/compras", (req, res) => {
+  if (!req.session.username) {
+    res.redirect("/");
+    return;
+  }
+
+  // consulto a la base de datos las compras del usuarix req.session.username
+  const comprasUsr = getCompras(req.session.username);
+
+  res.render("compras", {
+    name: req.session.name,
+    userPic: req.session.userimg,
+    compras: comprasUsr,
+  });
+});
+
+app.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
 });
 
 app.listen(puerto, () => {
   console.log(`Iniciando servidor en el puerto ${puerto}`);
 });
+
+function getUser(usr, pwd) {
+  return users.find((user) => user.username === usr && user.pass === pwd);
+}

@@ -1,0 +1,26 @@
+[
+    {
+      "username": "maria",
+      "pass": "control",
+      "name": "Maria Perez",
+      "userimg":"maria.jpg"
+    },
+    {
+      "username": "gracielac",
+      "pass": "1234",
+      "name": "Graciela Cordoba",
+      "userimg":"graciela.jpg"
+    },
+    {
+      "username": "antonia94",
+      "pass": "antonia",
+      "name": "Antonia Bilbao",
+      "userimg":"antonia.jpg"
+    },
+    {
+      "username": "eli45",
+      "pass": "123abc",
+      "name": "Eliana Racedo",
+      "userimg":"eliana.jpg"
+    }
+  ]
