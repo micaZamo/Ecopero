@@ -1,6 +1,6 @@
 const mongoClient = require("mongodb").MongoClient;
 
-function todosProductos(cbErr, cbProducto) {
+function todosProductos(nombre, coleccion, cbErr, cbProducto) {
   mongoClient.connect("mongodb://localhost:27017", function (err, client) {
     if (err) {
       console.log("Hubo un error conectando con el servidor:", err);
@@ -9,12 +9,10 @@ function todosProductos(cbErr, cbProducto) {
     }
     // Conecto base de datos y colección
     const dbEcopero = client.db("Ecopero");
-    const colParteArriba = dbEcopero.collection("parteArriba");
-    const colParteAbajo = dbEcopero.collection("parteAbajo");
-    const colMonopredas = dbEcopero.collection("monoprendas");
+    const colecciones = dbEcopero.collection(coleccion);
 
     // Consulto todos los documentos y los paso a Array (función asincrónica)
-    colParteArriba.find().toArray(function (err, datos) {
+    colecciones.find({ nombre: RegExp(nombre) }).toArray(function (err, datos) {
       client.close();
 
       if (err) {

@@ -97,6 +97,39 @@ app.get("/logout", (req, res) => {
   req.session.destroy();
   res.redirect("/");
 });
+//app.get("/partearriba", (req, res)=>{
+//const nombre="";//
+
+app.get("/productos", (req, res) => {
+  const nombre = "";
+  const colArriba = "parteArriba";
+  const colAbajo = "parteAbajo";
+  const colmono = "monoprendas";
+  dbproductos.todosProductos(
+    nombre,
+    colArriba,
+    (cbErr) => err,
+    (datos) => {
+      datos,
+        dbproductos.todosProductos(
+          nombre,
+          colAbajo,
+          (cbErr) => err,
+          (datos1) => {
+            datos1,
+              dbproductos.todosProductos(
+                nombre,
+                colmono,
+                (cbErr) => err,
+                (datos2) => {
+                  res.render("listadeprod", { datos, datos1, datos2 });
+                }
+              );
+          }
+        );
+    }
+  );
+});
 
 app.listen(puerto, () => {
   console.log(`Iniciando servidor en el puerto ${puerto}`);
