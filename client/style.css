@@ -29,7 +29,6 @@ a {
 .prod-inicio {
   height: 500px;
   width: 617.6px;
-  border: 1px solid black;
   background-image: url("fondo-prod.jpg");
   display: inline-block;
   font-family: -webkit-pictograph;
@@ -48,7 +47,6 @@ a {
 .recomendaciones {
   height: 500px;
   width: 617.6px;
-  border: 1px solid black;
   background-image: url("fondo-recom.png");
   display: inline-block;
   font-family: -webkit-pictograph;
@@ -62,4 +60,34 @@ a {
   color: lightblue;
   width: 50%;
   text-align: center;
+}
+
+#img-prods {
+  width: 300px;
+  height: 300px;
+}
+
+.tarjetas {
+  height: 369px;
+  width: 306px;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+}
+
+.about {
+  background-image: url("about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  opacity: 0.6;
+}
+.info-funcion {
+  height: 500px;
+  width: 617.6px;
+  border: 1px solid black;
+  display: inline-block;
+}
+.info-funcion {
+  background: thistle;
 }

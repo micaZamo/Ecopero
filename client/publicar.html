@@ -8,8 +8,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form action="" method="post">
-      <h1>Completa</h1>
+    <form action="guardar" method="POST" enctype="multipart/form-data">
+      <label for="name">Nombre: </label>
+      <input type="text" name="name" />
+
+      <label for="mail">Email: </label>
+      <input type="text" name="mail" />
+
+      <label for="phone">Telefono: </label>
+      <input type="text" name="phone" id="input-phone" />
+
+      <label for="size">Talla: </label>
+      <input type="text" name="size" />
+
+      <label for="price">Precio: </label>
+      <input type="number" name="price" />
+
+      <label for="cover">Imagen de la prenda: </label>
+      <input type="file" id="cover" name="cover" />
+
+      <input type="submit" value="Guardar" />
     </form>
+    <script src="pedidos.js"></script>
+    <script src="../server.js"></script>
+    <!–– preguntar si van los dos scripts––>
   </body>
 </html>

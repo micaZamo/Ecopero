@@ -5,6 +5,10 @@ const expHbs = require("express-handlebars");
 const dbproductos = require("./dbproductos");
 const expSession = require("express-session");
 const users = require("./users.json");
+const colArriba = "parteArriba";
+const colAbajo = "parteAbajo";
+const colmono = "monoprendas";
+const jsmulter = require("./client/pedidos");
 const puerto = 4554;
 
 app.use(express.urlencoded({ extended: true }));
@@ -36,6 +40,11 @@ app.get("/", (req, res) => {
   });
 });
 
+app.post("/guardar", jsmulter.upload.single("cover"), (req, res) => {
+  console.log(req.headers["content-type"]);
+  res.redirect("/");
+});
+
 app.post("/login", (req, res) => {
   const user = getUser(req.body.usr, req.body.pwd);
 
@@ -48,13 +57,13 @@ app.post("/login", (req, res) => {
 
     res.redirect("/home");
   } else {
-    res.redirect("/");
+    res.redirect("/login.html");
   }
 });
 
 app.get("/home", (req, res) => {
   if (!req.session.username) {
-    res.redirect("/");
+    res.redirect("/login");
     return;
   }
 
@@ -97,14 +106,9 @@ app.get("/logout", (req, res) => {
   req.session.destroy();
   res.redirect("/");
 });
-//app.get("/partearriba", (req, res)=>{
-//const nombre="";//
 
 app.get("/productos", (req, res) => {
-  const nombre = "";
-  const colArriba = "parteArriba";
-  const colAbajo = "parteAbajo";
-  const colmono = "monoprendas";
+  let nombre = "";
   dbproductos.todosProductos(
     nombre,
     colArriba,
@@ -123,6 +127,72 @@ app.get("/productos", (req, res) => {
                 (cbErr) => err,
                 (datos2) => {
                   res.render("listadeprod", { datos, datos1, datos2 });
+                }
+              );
+          }
+        );
+    }
+  );
+});
+
+app.get("/partearriba", (req, res) => {
+  let nombre = "";
+  console.log("inicioo");
+  dbproductos.todosProductos(
+    nombre,
+    colArriba,
+    (cbErr) => err,
+    (datos) => {
+      console.log(datos), res.render("partedearriba", { datos });
+    }
+  );
+});
+
+app.get("/parteabajo", (req, res) => {
+  let nombre = "";
+  dbproductos.todosProductos(
+    nombre,
+    colAbajo,
+    (cbErr) => err,
+    (datos) => {
+      console.log(datos), res.render("partedeabajo", { datos });
+    }
+  );
+});
+
+app.get("/monoprendas", (req, res) => {
+  let nombre = "";
+  dbproductos.todosProductos(
+    nombre,
+    colmono,
+    (cbErr) => err,
+    (datos) => {
+      console.log(datos), res.render("monoprendas", { datos });
+    }
+  );
+});
+
+app.get("/buscar", (req, res) => {
+  let nombre = req.query.nombre;
+  dbproductos.todosProductos(
+    nombre,
+    colArriba,
+    (cbErr) => err,
+    (datos) => {
+      datos,
+        dbproductos.todosProductos(
+          nombre,
+          colAbajo,
+          (cbErr) => err,
+          (datos1) => {
+            datos1,
+              dbproductos.todosProductos(
+                nombre,
+                colmono,
+                (cbErr) => err,
+                (datos2) => {
+                  console.log(datos),
+                    res.render("grillabusq", { datos, datos1, datos2 });
                 }
               );
           }

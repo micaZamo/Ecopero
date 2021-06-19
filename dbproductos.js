@@ -28,6 +28,7 @@ function todosProductos(nombre, coleccion, cbErr, cbProducto) {
     });
   });
 }
+
 module.exports = {
   todosProductos,
 };

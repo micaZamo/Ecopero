@@ -1,12 +1,25 @@
-{{#each datos}}
-<p>{{this.nombre}}</p>
-<img src="/parte-arriba/{{this.foto}}" >
-{{/each}}
-{{#each datos1}}
-<p>{{this.nombre}}</p>
-<img src="/parte-abajo/{{this.foto}}" >
-{{/each}}
-{{#each datos2}}
-<p>{{this.nombre}}</p>
-<img src="/mono-prendas/{{this.foto}}" >
-{{/each}}
+    {{#each datos}}
+    <div class="tarjetas">
+        <img src="/parte-arriba/{{this.foto}}" id="img-prods" >
+        <p>{{this.nombre}}</p>
+        <a href="/comprar">Comprar: ${{this.precioC}}</a>
+        <a href="/alquilar">Alquilar: ${{this.precioA}}</a>
+    </div>
+    {{/each}}
+    {{#each datos1}}
+    <div class="tarjetas">
+        <img src="/parte-abajo/{{this.foto}}" id="img-prods" >
+        <p>{{this.nombre}}</p>
+        <a href="/comprar">Comprar: ${{this.precioC}}</a>
+        <a href="/alquilar">Alquilar: ${{this.precioA}}</a>
+    </div>
+    {{/each}}
+    {{#each datos2}}
+    <div class="tarjetas">
+        <img src="/mono-prendas/{{this.foto}}" id="img-prods" >
+        <p>{{this.nombre}}</p>
+        <a href="/comprar">Comprar: ${{this.precioC}}</a>
+        <a href="/alquilar">Alquilar: ${{this.precioA}}</a>
+    </div>
+    {{/each}}
+
