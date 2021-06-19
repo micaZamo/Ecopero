@@ -4,9 +4,11 @@ const btnComprar = document.getElementById("btn-comprar");
 const btnPrestar = document.getElementById("btn-prestar");
 
 btnBuscar.addEventListener("click", function () {
-  const inicialMayus = inputNombre.value.slice(0, 1).toLocaleUpperCase();
-  const restoValue = inputNombre.value.slice(1);
-  const valueConMayus = inicialMayus + restoValue;
+  const inicial = inputNombre.value.slice(0, 1);
+  const inicialMayus = inicial.toUpperCase();
+  const resto = inputNombre.value.slice(1);
+  const restoMins = resto.toLowerCase();
+  const valueConMayus = inicialMayus + restoMins;
   window.location.href = "/buscar?nombre=" + valueConMayus;
 });
 

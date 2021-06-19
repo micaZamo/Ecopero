@@ -86,22 +86,6 @@ app.get("/datos", (req, res) => {
   });
 });
 
-app.get("/compras", (req, res) => {
-  if (!req.session.username) {
-    res.redirect("/");
-    return;
-  }
-
-  // consulto a la base de datos las compras del usuarix req.session.username
-  const comprasUsr = getCompras(req.session.username);
-
-  res.render("compras", {
-    name: req.session.name,
-    userPic: req.session.userimg,
-    compras: comprasUsr,
-  });
-});
-
 app.get("/logout", (req, res) => {
   req.session.destroy();
   res.redirect("/");
