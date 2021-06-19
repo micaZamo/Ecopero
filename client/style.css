@@ -29,7 +29,7 @@ a {
 .prod-inicio {
   height: 500px;
   width: 617.6px;
-  background-image: url("fondo-prod.jpg");
+  background-image: url("./imagenes/fondo-prod.jpg");
   display: inline-block;
   font-family: -webkit-pictograph;
   font-size: -webkit-xxx-large;
@@ -47,7 +47,7 @@ a {
 .recomendaciones {
   height: 500px;
   width: 617.6px;
-  background-image: url("fondo-recom.png");
+  background-image: url("./imagenes/fondo-recom.png");
   display: inline-block;
   font-family: -webkit-pictograph;
   font-size: -webkit-xxx-large;
@@ -76,7 +76,7 @@ a {
 }
 
 .about {
-  background-image: url("about.jpg");
+  background-image: url("./imagenes/about.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;

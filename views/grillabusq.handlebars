@@ -1,13 +1,25 @@
-
-  <ul>
     {{#each datos}}
-      <li>{{this.nombre}}</a></li>
+    <div class="tarjetas">
+        <img src="/imagenes/parte-arriba/{{this.foto}}" id="img-prods" >
+        <p>{{this.nombre}}</p>
+        <a href="/comprar">Comprar: ${{this.precioC}}</a>
+        <a href="/alquilar">Alquilar: ${{this.precioA}}</a>
+    </div>
     {{/each}}
     {{#each datos1}}
-      <li>{{this.nombre}}</a></li>
+    <div class="tarjetas">
+        <img src="/imagenes/parte-abajo/{{this.foto}}" id="img-prods" >
+        <p>{{this.nombre}}</p>
+        <a href="/comprar">Comprar: ${{this.precioC}}</a>
+        <a href="/alquilar">Alquilar: ${{this.precioA}}</a>
+    </div>
     {{/each}}
     {{#each datos2}}
-      <li>{{this.nombre}}</a></li>
+    <div class="tarjetas">
+        <img src="/imagenes/mono-prendas/{{this.foto}}" id="img-prods" >
+        <p>{{this.nombre}}</p>
+        <a href="/comprar">Comprar: ${{this.precioC}}</a>
+        <a href="/alquilar">Alquilar: ${{this.precioA}}</a>
+    </div>
     {{/each}}
-  </ul>
 

@@ -192,13 +192,21 @@ app.get("/buscar", (req, res) => {
                 (cbErr) => err,
                 (datos2) => {
                   console.log(datos),
-                    res.render("grillabusq", { datos, datos1, datos2 });
+                    res.render("listadeprod", { datos, datos1, datos2 });
                 }
               );
           }
         );
     }
   );
+});
+
+app.get("/comprar", (req, res) => {
+  res.redirect("/productos");
+});
+
+app.get("/prestar", (req, res) => {
+  res.redirect("/publicar.html");
 });
 
 app.listen(puerto, () => {
