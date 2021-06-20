@@ -9,8 +9,12 @@
 </head>
 <body>
     <header>
-        <a href="login.html">INGRESAR</a>
+        {{#if sesion.username}}
+        <a href="/logout">CERRAR SESION</a>
+        {{else}}
+        <a href="/logeo">INGRESAR</a>
         <a href="publicar.html">PRESTAR</a>
+        {{/if}}
         <img src="/imagenes/Ecoperologo.png">
     </header>
     {{{body}}}

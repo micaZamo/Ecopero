@@ -1,6 +1,6 @@
 const mongoClient = require("mongodb").MongoClient;
 
-function todosProductos(nombre, coleccion, cbErr, cbProducto) {
+function usuarios(user, cbErr, cbUsuario) {
   mongoClient.connect("mongodb://localhost:27017", function (err, client) {
     if (err) {
       console.log("Hubo un error conectando con el servidor:", err);
@@ -9,10 +9,10 @@ function todosProductos(nombre, coleccion, cbErr, cbProducto) {
     }
     // Conecto base de datos y colección
     const dbEcopero = client.db("Ecopero");
-    const colecciones = dbEcopero.collection(coleccion);
+    const colecciones = dbEcopero.collection("users");
 
     // Consulto todos los documentos y los paso a Array (función asincrónica)
-    colecciones.find({ nombre: RegExp(nombre) }).toArray(function (err, datos) {
+    colecciones.find({ username: user }).toArray(function (err, datos) {
       client.close();
 
       if (err) {
@@ -24,12 +24,12 @@ function todosProductos(nombre, coleccion, cbErr, cbProducto) {
       console.log(datos);
 
       // Si llegué acá no hubo errores, los retorno al callback de datos
-      cbProducto(datos);
+      cbUsuario(datos);
     });
   });
 }
 
-function porId(id, coleccion, cbErr, cbProducto) {
+function insertar(user, cbErr, cbUsuario) {
   mongoClient.connect("mongodb://localhost:27017", function (err, client) {
     if (err) {
       console.log("Hubo un error conectando con el servidor:", err);
@@ -38,8 +38,10 @@ function porId(id, coleccion, cbErr, cbProducto) {
     }
     // Conecto base de datos y colección
     const dbEcopero = client.db("Ecopero");
-    const colecciones = dbEcopero.collection(coleccion);
-    colecciones.findOne({ id: id }, function (err, datos) {
+    const colecciones = dbEcopero.collection("users");
+
+    // Consulto todos los documentos y los paso a Array (función asincrónica)
+    colecciones.insertOne(user, function (err, datos) {
       client.close();
 
       if (err) {
@@ -48,15 +50,12 @@ function porId(id, coleccion, cbErr, cbProducto) {
         return;
       }
 
-      console.log(datos);
-
       // Si llegué acá no hubo errores, los retorno al callback de datos
-      cbProducto(datos);
+      cbUsuario(datos);
     });
   });
 }
-
 module.exports = {
-  todosProductos,
-  porId,
+  usuarios,
+  insertar,
 };

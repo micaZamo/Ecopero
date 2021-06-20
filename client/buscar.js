@@ -2,6 +2,8 @@ const btnBuscar = document.getElementById("btn-buscar");
 const inputNombre = document.getElementById("input-nombre");
 const btnComprar = document.getElementById("btn-comprar");
 const btnPrestar = document.getElementById("btn-prestar");
+const btnCompraProds = document.getElementById("compra");
+const btnAlquila = document.getElementById("alquila");
 
 btnBuscar.addEventListener("click", function () {
   const inicial = inputNombre.value.slice(0, 1);
@@ -18,4 +20,12 @@ btnComprar.addEventListener("click", function () {
 
 btnPrestar.addEventListener("click", function () {
   window.location.href = "/prestar";
+});
+
+btnCompraProds.addEventListener("click", function () {
+  window.location.href = "/detalleproducto";
+});
+
+btnAlquila.addEventListener("click", function () {
+  window.location.href = "/detalleproducto";
 });
