@@ -29,6 +29,7 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 app.set("views", path.join(`${__dirname}/views`));
+//********************************************************/
 
 //Para sesiones en express
 app.use(
@@ -36,7 +37,7 @@ app.use(
     secret: "isahdihvbrvyrbvrysgdygdefuiahf",
   })
 );
-
+//********************************************************/
 app.get("/", (req, res) => {
   res.render("bienvenida", {
     titulo: "Ecopero",
@@ -280,6 +281,13 @@ app.get("/prestar", (req, res) => {
   res.redirect("/publicar.html");
 });
 
+app.get("/combos", (req, res) => {
+  dbproductos.todasCombinaciones(
+    "",
+    (Err) => console.log("error"),
+    (datos) => res.render("comb", { datos, tipo: datos.tipo })
+  );
+});
 app.listen(puerto, () => {
   console.log(`Iniciando servidor en el puerto ${puerto}`);
 });

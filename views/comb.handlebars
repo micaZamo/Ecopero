@@ -1,6 +1,14 @@
-<h1>Evento especial</h1>
-<div>
-    <h2>Look ideal para una entrevista de trabajo</h2>
-
-
-</div>
+{{#each datos}}
+{{#if tipo}}
+    <h3>Ideal para {{this.title}}</h3>
+    <img src="/imagenes/parte-arriba/{{this.prod1}}">
+    <img src="/imagenes/parte-abajo/{{this.prod2}}">
+    <p>Precio: ${{this.precio}}</p>
+    {{else}}
+        <h3>Aprovecha {{this.title}}</h3>
+        <img src="/imagenes/parte-arriba/{{this.prod1}}">
+        <img src="/imagenes/parte-arriba/{{this.prod2}}">
+        <img src="/imagenes/parte-arriba/{{this.prod3}}">
+        <p>Precio: ${{this.precio}}</p>
+{{/if}}
+{{/each}}

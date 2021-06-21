@@ -1,0 +1,36 @@
+[
+    {
+        "id":1,
+        "title":"entrevista de trabajo",
+        "prod1":"camisa-bordo.jpeg",
+        "prod2":"pantalon-satrero.jpg" ,
+        "precio":420,
+        "tipo":"evento"
+    },
+    {
+        "id":2,
+        "title":"look bomba after office",
+        "prod1":"remera-ramones.jpg",
+        "prod2":"pollera-amarilla.jpg",
+        "precio":560,
+        "tipo":"evento"
+    },
+    {
+        "id":3,
+        "title":"combo 3 buzos x 30 dias",
+        "prod1":"buzo-alf.jpg",
+        "prod2":"buzo-negro.jpg",
+        "prod3":"buzo-negrocorazon.jpg",
+        "precio":940,
+        "tipo":"combo"
+    },
+    {
+        "id":4,
+        "title":"combo 3 remeras x 30 dias",
+        "prod1":"remera-rollingstone.jpg",
+        "prod2":"remeron-thewho.jpg",
+        "prod3":"remera-hendrix.jpg",
+        "precio":750,
+        "tipo":"combo"
+    }
+]
