@@ -9,8 +9,9 @@ const colArriba = "parteArriba";
 const colAbajo = "parteAbajo";
 const colmono = "monoprendas";
 const jsmulter = require("./client/pedidos");
-const dbusuarios = require("./dbusuarios");
+const dbvarios = require("./dbvarios");
 const { Recoverable } = require("repl");
+const { equal } = require("assert");
 const puerto = 4554;
 
 app.use(express.urlencoded({ extended: true }));
@@ -43,7 +44,27 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/publicar", (req, res) => {
+  res.render("prestar", {});
+});
+
 app.post("/enviar", jsmulter.upload.single("cover"), (req, res) => {
+  const ext = req.file.originalname.slice(
+    req.file.originalname.lastIndexOf(".")
+  );
+  const users = {
+    name: req.body.name,
+    mail: req.body.mail,
+    phone: req.body.phone,
+    size: req.body.size,
+    price: req.body.size,
+    cover: `img-${req.body.phone}${ext}`,
+  };
+  dbvarios.insertarPresta(
+    users,
+    (cberr) => console.log("Error"),
+    (resultado) => console.log("ok")
+  );
   console.log(req.headers["content-type"]);
   res.redirect("/");
 });
@@ -54,7 +75,7 @@ app.get("/logeo", (req, res) => {
 
 app.post("/login", (req, res) => {
   const usuario = "";
-  dbusuarios.usuarios(
+  dbvarios.usuarios(
     usuario,
     (err) => res.redirect("/login"),
     (datos) => {
@@ -119,7 +140,7 @@ app.post("/registro", (req, res) => {
     name: req.body.name,
     userimg: req.body.userimg,
   };
-  dbusuarios.insertar(
+  dbvarios.insertar(
     users,
     (cberr) => console.log("Error"),
     (resultado) => console.log("ok")
