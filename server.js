@@ -179,37 +179,51 @@ app.get("/productos", (req, res) => {
 
 app.get("/partearriba", (req, res) => {
   let nombre = "";
-  console.log("inicioo");
+  const modo = req.query.modo;
+  let compra = false;
+  if (modo) {
+    compra = true;
+  }
   dbproductos.todosProductos(
     nombre,
     colArriba,
     (cbErr) => err,
     (datos) => {
-      console.log(datos), res.render("partedearriba", { datos });
+      console.log(datos), res.render("partedearriba", { datos, compra });
     }
   );
 });
 
 app.get("/parteabajo", (req, res) => {
   let nombre = "";
+  const modo = req.query.modo;
+  let compra = false;
+  if (modo) {
+    compra = true;
+  }
   dbproductos.todosProductos(
     nombre,
     colAbajo,
     (cbErr) => err,
     (datos) => {
-      console.log(datos), res.render("partedeabajo", { datos });
+      console.log(datos), res.render("partedeabajo", { datos, compra });
     }
   );
 });
 
 app.get("/monoprendas", (req, res) => {
   let nombre = "";
+  const modo = req.query.modo;
+  let compra = false;
+  if (modo) {
+    compra = true;
+  }
   dbproductos.todosProductos(
     nombre,
     colmono,
     (cbErr) => err,
     (datos) => {
-      console.log(datos), res.render("monoprendas", { datos });
+      console.log(datos), res.render("monoprendas", { datos, compra });
     }
   );
 });
@@ -245,6 +259,11 @@ app.get("/buscar", (req, res) => {
 
 app.get("/detalleproducto", (req, res) => {
   const id = parseInt(req.query.id);
+  const modo = req.query.modo;
+  let compra = false;
+  if (modo) {
+    compra = true;
+  }
   console.log(req.query.id);
   dbproductos.porId(
     id,
@@ -264,7 +283,12 @@ app.get("/detalleproducto", (req, res) => {
                 (cbErr) => err,
                 (datos2) => {
                   console.log(datos, datos1, datos2),
-                    res.render("detalleprods", { datos, datos1, datos2 });
+                    res.render("detalleprods", {
+                      datos,
+                      datos1,
+                      datos2,
+                      compra,
+                    });
                 }
               );
           }
@@ -278,7 +302,7 @@ app.get("/comprar", (req, res) => {
 });
 
 app.get("/prestar", (req, res) => {
-  res.redirect("/publicar.html");
+  res.redirect("/publicar");
 });
 
 app.get("/combos", (req, res) => {

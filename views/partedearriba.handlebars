@@ -2,7 +2,8 @@
     <div class="tarjetas">
         <img src="imagenes/parte-arriba/{{this.foto}}" id="img-prods" >
         <p>{{this.nombre}}</p>
-        <a href="/detalleproducto?id={{this.id}}">Comprar: ${{this.precioC}}</a>
+        <p>Talle: {{this.talle}}</p>
+        <a href="/detalleproducto?id={{this.id}}&modo=1">Comprar: ${{this.precioC}}</a>
         <a href="/detalleproducto?id={{this.id}}">Alquilar: ${{this.precioA}}</a>
     </div>
     {{/each}}

@@ -1,21 +1,21 @@
     <form action="enviar" method="POST" enctype="multipart/form-data">
       <label for="name">Nombre: </label>
-      <input type="text" name="name" />
+      <input type="text" name="name" required />
 
       <label for="mail">Email: </label>
-      <input type="text" name="mail" />
+      <input type="email" name="mail" required/>
 
       <label for="phone">Telefono: </label>
-      <input type="text" name="phone" id="input-phone" />
+      <input type="number" name="phone" id="input-phone" required />
 
       <label for="size">Talla: </label>
       <input type="text" name="size" />
 
       <label for="price">Precio: </label>
-      <input type="number" name="price" />
+      <input type="number" name="price" required/>
 
       <label for="cover">Imagen de la prenda: </label>
-      <input type="file" id="cover" name="cover" />
+      <input type="file" id="cover" name="cover" required/>
 
       <input type="submit" value="Enviar" />
     </form>
