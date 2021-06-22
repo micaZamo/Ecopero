@@ -4,19 +4,19 @@ header {
   width: 100%;
 }
 header > img {
-    width: 120px;
-    height: 120px;
-    position: sticky;
-    margin-left: 50%;
-    margin-top: -18px;
+  width: 120px;
+  height: 120px;
+  position: sticky;
+  margin-left: 45%;
+  margin-top: -18px;
 }
-header > a{
-    margin: 6px;
-    position: absolute;
-    margin-top: 45px;
-    color: black;
+header > a {
+  margin: 6px;
+  position: absolute;
+  margin-top: 45px;
+  color: black;
 }
-#elem-header{
+#elem-header {
   text-align: right;
   margin: 6px;
   position: absolute;
@@ -38,19 +38,20 @@ nav {
 nav > a {
   color: white;
 }
-nav input{
-    height: 30px;
-    width: 206px;
-    margin-left: 84px;
+nav input {
+  height: 30px;
+  width: 206px;
+  margin-left: 84px;
 }
-nav button{
+nav button {
   height: 30px;
 }
 a {
   text-decoration: none;
-  margin: 28px;
+  margin: 13px;
+  color: black;
 }
-h1{
+h1 {
   text-align: center;
   font-size: 40px;
   color: darksalmon;
@@ -95,22 +96,31 @@ h1{
   width: 300px;
   height: 300px;
 }
+#img-details {
+  width: 400px;
+  height: 400px;
+}
 
 .tarjetas {
-  height: 369px;
+  height: 430px;
   width: 306px;
   border: 1px solid black;
   display: inline-block;
   text-align: center;
+  margin-top: 15px;
+}
+.tarjetas > a {
+  border-radius: 7px;
+  background: powderblue;
 }
 
-.about h3{
-  color:floralwhite;
+.about h3 {
+  color: floralwhite;
   font-size: 30px;
   text-align: center;
   font-family: system-ui;
 }
-.about{
+.about {
   opacity: 0.6;
   background-image: url("./imagenes/about.jpg");
   background-repeat: no-repeat;
@@ -126,21 +136,91 @@ h1{
   background: white;
   text-align: center;
   font-family: -webkit-pictograph;
-  font-size: 28px;
+  font-size: 20px;
 }
-.info-funcion button{
+.info-funcion button {
   border: 1px solid black;
-  background: darkseagreen;
+  background: pink;
   height: 40px;
   width: 90px;
   font-family: cursive;
 }
-footer{
-  background-color:lavenderblush;
+footer {
+  background-color: lavenderblush;
   color: black;
-  font-size: x-large;
   height: 170px;
   text-align: center;
   margin-top: 43px;
+  padding-top: 20px;
 }
 
+.tj-detalle > p {
+  margin-left: 120px;
+  font-size: 20px;
+}
+
+.tj-detalle > h2 {
+  font-size: 30px;
+}
+
+#btn-carrito {
+  background: black;
+  color: white;
+  height: 30px;
+  display: block;
+  margin-left: 114px;
+}
+
+.combos {
+  text-align: center;
+}
+.combos > p {
+  margin: auto;
+  font-size: 20px;
+  background: powderblue;
+  height: 26px;
+  width: 118px;
+  border-radius: 6px;
+}
+.combos > img {
+  width: 300px;
+  height: 300px;
+}
+.combos > span {
+  margin: 18px;
+  vertical-align: middle;
+  position: relative;
+  bottom: 151px;
+  font-size: 30px;
+}
+
+#iconos {
+  font-size: 90px;
+  margin: 36px;
+}
+form {
+  margin-top: 20px;
+  text-align: center;
+  width: 246px;
+  position: relative;
+  left: 40%;
+}
+form input {
+  margin: 6px;
+}
+
+#home {
+  text-align: center;
+  font-size: 20px;
+}
+#home > img {
+  height: 30%;
+  width: 30%;
+  margin-bottom: 74px;
+  position: relative;
+  left: 177px;
+}
+#home a {
+  position: relative;
+  right: 140px;
+}

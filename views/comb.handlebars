@@ -1,14 +1,19 @@
 {{#each datos}}
 {{#if tipo}}
+<div class="combos">
     <h3>Ideal para {{this.title}}</h3>
     <img src="/imagenes/parte-arriba/{{this.prod1}}">
+    <span>+</span>
     <img src="/imagenes/parte-abajo/{{this.prod2}}">
     <p>Precio: ${{this.precio}}</p>
     {{else}}
         <h3>Aprovecha {{this.title}}</h3>
         <img src="/imagenes/parte-arriba/{{this.prod1}}">
+        <span>+</span>
         <img src="/imagenes/parte-arriba/{{this.prod2}}">
+        <span>+</span>
         <img src="/imagenes/parte-arriba/{{this.prod3}}">
         <p>Precio: ${{this.precio}}</p>
+</div>
 {{/if}}
 {{/each}}
