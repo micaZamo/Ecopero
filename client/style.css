@@ -1,13 +1,27 @@
 header {
   background: lavenderblush;
   height: 112px;
+  width: 100%;
 }
 header > img {
     width: 120px;
     height: 120px;
-    text-align: center;
     position: sticky;
     margin-left: 50%;
+    margin-top: -18px;
+}
+header > a{
+    margin: 6px;
+    position: absolute;
+    margin-top: 45px;
+    color: black;
+}
+#elem-header{
+  text-align: right;
+  margin: 6px;
+  position: absolute;
+  margin-top: 45px;
+  color: black;
 }
 nav {
   background: pink;
@@ -17,15 +31,29 @@ nav {
   top: 50px;
   width: 100%;
   padding: 20px;
-  font-size: 17px;
+  font-size: 30px;
   text-decoration: none;
   font-family: sans-serif;
 }
 nav > a {
   color: white;
 }
+nav input{
+    height: 30px;
+    width: 206px;
+    margin-left: 84px;
+}
+nav button{
+  height: 30px;
+}
 a {
   text-decoration: none;
+  margin: 28px;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+  color: darksalmon;
 }
 .prod-inicio {
   height: 500px;
@@ -76,19 +104,43 @@ a {
   text-align: center;
 }
 
-.about {
+.about h3{
+  color:floralwhite;
+  font-size: 30px;
+  text-align: center;
+  font-family: system-ui;
+}
+.about{
+  opacity: 0.6;
   background-image: url("./imagenes/about.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  opacity: 0.6;
 }
+
 .info-funcion {
   height: 500px;
   width: 617.6px;
   border: 1px solid black;
-  display: inline-block;
+  display: inline-table;
+  background: white;
+  text-align: center;
+  font-family: -webkit-pictograph;
+  font-size: 28px;
 }
-.info-funcion {
-  background: thistle;
+.info-funcion button{
+  border: 1px solid black;
+  background: darkseagreen;
+  height: 40px;
+  width: 90px;
+  font-family: cursive;
 }
+footer{
+  background-color:lavenderblush;
+  color: black;
+  font-size: x-large;
+  height: 170px;
+  text-align: center;
+  margin-top: 43px;
+}
+
